@@ -65,3 +65,44 @@ Remember, relative widths are based off of the viewport, but relative heights ar
 ## CSS Grid `repeat` function
 
 You can use `repeat` to quickly create rows and columns. first argument is how many times to repeat, the second argument is what to repeat. That second argument could be multiple rows/columns. Further more, the repeat function can be surrounded by fixed tracks. In short, it's pretty gosh darn flexible.
+
+## Placing Grid Items
+
+If you change the size of any item in the grid, it will change the size of the track accordingly. For example, you make a grid item 500px, the width of the track will be set to 500px to accomodate for that.
+
+If this is undesired behavior, you can use `span` to explicitly define sizes of specific items.
+
+```
+grid-column: span 2;
+```
+
+The item will now span over two columns without changing the widths of the other items.
+
+If the span exceeds the number of columns, it will be shunted to the next row, leaving an empty space. This _doesn't_ happen if this makes the item span the entire width of the grid. If it spans the entire width, it will instead keep that item in the same row, but add implicit columns.
+
+You can use `grid-row` for rows.
+
+---
+
+Be aware that `grid-column` and `grid-row` are _shorthands_.
+
+In other words, `grid-column` can be specified with `grid-column-start` and `grid-column-end`.
+
+```
+grid-column-start: 2;
+grid-column-end: 5;
+```
+
+Alternatively:
+
+```
+grid-column: 2 / 5;
+```
+
+If you want to span or end at the end of the row, but don't know what track number that is, use:
+
+```
+grid-column: 1 / -1;
+```
+
+This is similar to python list slicers. This is doesn't work for `grid-row` unless the number of rows is explicitly stated. (i.e. Doesn't work on implicit rows)
