@@ -38,7 +38,7 @@ function Stopwatch() {
   // with the timerRef.current (the intervalId you get back from setInterval).
   useEffect(() => {
     return () => clearInterval(timerRef.current)
-  }, [])
+  }, []) // we pass [] so that the return only runs when the component unmounts.
 
   function handleRunClick() {
     if (running) {

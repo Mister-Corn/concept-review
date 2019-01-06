@@ -29,3 +29,29 @@ needed), it's only called once.
 For the second argument of `useEffect`, it uses references equality to do the
 check. Therefore, using objects in there will not do anything, since the objects
 will be different.
+
+## Exercise 05
+
+If what you're using in effect will change how the DOM will render, use
+`useEffectLayout`. Otherwise, use `useEffect`.
+
+In this exercise, you wouldn't pass `tiltNode.current` in the second argument
+for `useEffect` (as of 11/2018). This is because you only want this code to run
+once, but if you pass `tiltNode.current`, it will run twice, as in the first
+render, it will be undefined, but in the subsequent render, it will have the
+value of the DOM node, causing `useEffect` to run again.
+
+## Exercise 06
+
+In addition to referencing DOM nodes, `useRef` can be used to keep track of
+variables across scope and time.
+
+Timestamp: II 57:50
+
+---
+
+Line 41 Note
+
+Timestamp: II 1:00:40
+
+"If it's not in the JSX, it shouldn't be in state"
