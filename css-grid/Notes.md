@@ -105,4 +105,12 @@ If you want to span or end at the end of the row, but don't know what track numb
 grid-column: 1 / -1;
 ```
 
-This is similar to python list slicers. This is doesn't work for `grid-row` unless the number of rows is explicitly stated. (i.e. Doesn't work on implicit rows)
+This is similar to python list slicers. This is doesn't work for `grid-row` unless the number of rows is explicitly stated. (i.e. Doesn't work on implicit trackss)
+
+# 12: `auto-fit` and `auto-fill`
+
+`auto-fill`: Instead of describing how many rows/columns, have it make as many tracks it can fit within the container. If there's not enough items to fill, the grid will have empty spots
+
+`auto-fit`: Similar to `auto-fill`, but the grid will be sized to the number of items available.
+
+# 13: Using `minmax()` for Responsive Grids
