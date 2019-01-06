@@ -1,7 +1,7 @@
 import React from 'react'
 import {render, fireEvent, flushEffects} from 'react-testing-library'
-import Usage from '../exercises-final/04'
-// import Usage from '../exercises/04'
+// import Usage from '../exercises-final/04'
+import Usage from '../exercises/04'
 
 afterEach(() => {
   window.localStorage.removeItem('count')
