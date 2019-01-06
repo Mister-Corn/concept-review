@@ -1,7 +1,7 @@
 import React from 'react'
 import {render, fireEvent} from 'react-testing-library'
-import Usage, {useCounter} from '../exercises-final/02'
-// import Usage, {useCounter} from '../exercises/02'
+// import Usage, {useCounter} from '../exercises-final/02'
+import Usage, {useCounter} from '../exercises/02'
 
 test('Usage works', () => {
   const {container} = render(<Usage />)

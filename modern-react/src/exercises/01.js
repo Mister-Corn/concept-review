@@ -1,6 +1,6 @@
 // Counter: useState
 // 🐨 you'll need to add {useState} to this import statement
-import React from 'react'
+import React, { useState } from 'react'
 
 // 💰 the `useState` hook allows you to use state
 // from within function components in react:
@@ -8,8 +8,10 @@ import React from 'react'
 
 function Counter() {
   // 🐨 you'll call useState here to get count and setCount
+  const [count, setCount] = useState(0)
+  const increment = () => setCount(count + 1)
   // 🐨 render the count here and add an onClick handler that increments the count
-  return <button>TODO</button>
+  return <button onClick={increment}>{count}</button>
 }
 
 // Don't make changes to the Usage component. It's here to show you how your
